@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+var cors = require('cors');
 const env = require("dotenv");
 
 const app = express();
@@ -8,6 +9,7 @@ env.config();
 app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms")
 );
+app.use(cors());
 app.use(express.json());
 
 app.get("/api", (req, res) => {
