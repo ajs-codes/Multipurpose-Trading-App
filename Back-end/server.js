@@ -1,9 +1,8 @@
 const express = require("express");
-const morgan = require("morgan");
-var cors = require('cors');
-const env = require("dotenv");
-
 const app = express();
+const morgan = require("morgan");
+const cors = require("cors");
+const env = require("dotenv");
 
 env.config();
 app.use(
@@ -21,5 +20,5 @@ app.use((req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.log("Server started!");
+  console.log(`Server started in url : https://localhost:${process.env.PORT}`);
 });
