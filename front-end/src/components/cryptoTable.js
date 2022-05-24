@@ -21,7 +21,7 @@ export default function CryptoTable() {
    }, [])
    const navigateToChart = (data) => {
 
-      Navigate(`/crypto-chart`, { state: data });
+      Navigate(`/home/crypto-chart`, { state: data });
    };
 
 

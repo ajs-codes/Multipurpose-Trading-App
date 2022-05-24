@@ -30,7 +30,7 @@ const Login = () => {
               values
             );
             if(response.status === 200) {
-                Navigate(response.data.url);
+                Navigate("/home");
             }
           } catch (err) {
             console.log(err);
