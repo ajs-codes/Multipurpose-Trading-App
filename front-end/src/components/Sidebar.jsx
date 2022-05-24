@@ -4,15 +4,9 @@ import '../css/sidebar.scss';
 
 const sidebarNavItems = [
     {
-        display: 'Dashboard',
-        icon: <i className='bx bx-home'></i>,
-        to: '/home',
-        section: ''
-    },
-    {
         display: 'stock-chart',
         icon: <i className='bx bx-star'></i>,
-        to: '/home/stock-chart',
+        to: '/home',
         section: '/stock-chart'
     },
     {
@@ -20,12 +14,6 @@ const sidebarNavItems = [
         icon: <i className='bx bx-calendar'></i>,
         to: '/home/crypto-table',
         section: '/crypto-table'
-    },
-    {
-        display: 'Transaction',
-        icon: <i className='bx bx-user'></i>,
-        to: '/home/transaction',
-        section: '/transaction'
     },
 ]
 
@@ -53,7 +41,7 @@ const Sidebar = () => {
 
     return <div className='sidebar'>
         <div className="sidebar__logo">
-            Animate
+            Asset Tracker
         </div>
         <div ref={sidebarRef} className="sidebar__menu">
             <div
